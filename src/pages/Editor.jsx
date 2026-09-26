@@ -6,6 +6,7 @@ import Preview from '../components/Preview.jsx'
 import CvSheet from '../components/Templates.jsx'
 import { StepExperiences, StepFormations, StepInfos, StepSkills } from '../components/Steps.jsx'
 import { useCvs } from '../lib/useCvs.js'
+import { InstallButton } from '../lib/pwa.jsx'
 import { analyzeCv, COLORS, EMPTY_CV, encodeShare, fullName, SAMPLES, TEMPLATES } from '../lib/cvData.js'
 
 const STEPS = ['Informations', 'Expériences', 'Formations', 'Compétences', 'Finalisation']
@@ -78,6 +79,7 @@ export default function Editor() {
             <div className="ml-auto flex flex-wrap items-center gap-2">
               <span className={`hidden text-xs font-semibold sm:inline ${saved ? 'text-emerald-600' : 'text-slate-400'}`} aria-live="polite">{saved ? '✓ Brouillon enregistré' : 'Enregistrement…'}</span>
               <CvMenu list={list} active={active} select={select} create={create} rename={rename} remove={remove} />
+              <InstallButton className="btn-ghost !py-2 hidden xl:inline-flex" label="⬇ Installer" />
               <button className="btn-ghost !py-2" onClick={printPdf}>🖨 Imprimer</button>
               <button className="btn-primary !py-2" onClick={downloadPdf}>⬇ PDF</button>
             </div>

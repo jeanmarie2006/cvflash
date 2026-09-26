@@ -27,6 +27,17 @@ télécharger en PDF, à partir de trois modèles. Projet n°2 du cahier des cha
 > Non réalisés : comptes utilisateurs côté serveur (Laravel + Sanctum, marqué « option » dans le cahier des
 > charges) et suggestions par l’API Claude (nécessiterait une clé secrète côté serveur).
 
+## Installer l’application (PWA)
+
+L’application est installable sur **Android, iPhone/iPad, Windows, Mac et Linux** : icône sur l’écran
+d’accueil, ouverture en plein écran, utilisation hors connexion après la première visite.
+Page d’aide avec QR code : `/installer` (bouton « Installer » sur l’accueil).
+
+- Android / ordinateur (Chrome, Edge) : bouton « Installer » ou icône ⊕ de la barre d’adresse
+- iPhone / iPad (Safari) : Partager → « Sur l’écran d’accueil »
+
+Technique : `manifest.webmanifest`, icônes (dont icône « maskable »), service worker (`public/sw.js`).
+
 ## Stack
 
 React 19 · Vite · Tailwind CSS 4 · react-hook-form · jsPDF + html2canvas-pro · React Router

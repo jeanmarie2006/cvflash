@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Logo from '../components/Logo.jsx'
 import CvSheet from '../components/Templates.jsx'
 import { SAMPLES } from '../lib/cvData.js'
+import { InstallButton } from '../lib/pwa.jsx'
 
 const STEPS = [
   ['1', 'Remplissez', 'Un formulaire guidé en 5 étapes : informations, expériences, formations, compétences.'],
@@ -24,6 +25,7 @@ export default function Landing() {
         <Logo />
         <nav className="flex items-center gap-2">
           <Link to="/exemples" className="btn-ghost hidden sm:inline-flex">Exemples</Link>
+          <InstallButton className="btn-ghost hidden md:inline-flex" label="⬇ Installer" />
           <Link to="/editeur" className="btn-primary">Créer mon CV</Link>
         </nav>
       </header>
@@ -92,7 +94,7 @@ export default function Landing() {
         </section>
       </main>
       <footer className="border-t border-slate-200 bg-white py-8 text-center text-sm text-slate-500">
-        CVFlash — projet de démonstration · Réalisé par <a className="font-semibold text-brand-700 hover:underline" href="https://sedjame-vianney.vercel.app" target="_blank" rel="noopener">Sedjame Vianney</a>
+        <Link to="/installer" className="font-semibold text-brand-700 hover:underline">Installer l’application</Link> · CVFlash — projet de démonstration · Réalisé par <a className="font-semibold text-brand-700 hover:underline" href="https://sedjame-vianney.vercel.app" target="_blank" rel="noopener">Sedjame Vianney</a>
       </footer>
     </div>
   )
