@@ -3,7 +3,7 @@
 Outil qui permet de saisir ses informations dans un formulaire guidé et de générer un CV soigné, prêt à
 télécharger en PDF, à partir de trois modèles. Projet n°2 du cahier des charges « 9 projets fictifs ».
 
-**Démo en ligne :** voir le lien dans le dépôt (Vercel) — bouton « Créer mon CV »
+**Démo en ligne :** https://cvflash.vercel.app
 
 ![Accueil](docs/accueil.png)
 ![Éditeur](docs/editeur.png)
